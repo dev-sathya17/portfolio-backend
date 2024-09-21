@@ -15,7 +15,7 @@ const router = require("./routes/route");
 
 app.use(
   cors({
-    origin: "https://sathyanarayanan-v.netlify.app/",
+    origin: "https://sathyanarayanan-v.netlify.app",
     credentials: true,
   })
 );
