@@ -48,12 +48,8 @@ const controller = {
       </body>
     </html>
         `;
-      const sent = sendEmail(email, subject, body);
-      if (sent) {
-        res.status(200).json({ message: "Email sent successfully" });
-      } else {
-        res.status(500).json({ error: "Failed to send email" });
-      }
+      sendEmail(email, subject, body);
+      res.status(200).json({ message: "Email sent successfully" });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Error sending email" });
